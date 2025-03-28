@@ -32,8 +32,8 @@ console.log("Details of 'Watch':", watchProduct);
 // using map to create an new array of product name only
  console.log("the array of the product name only:")
 
- const newArray=products.map((productName)=>productName.name)
- console.log(newArray)
+ const productNameOnly=products.map((productName)=>productName.name)
+ console.log(productNameOnly)
 
  // using filter to get all products that cost more than 100
 

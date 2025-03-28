@@ -11,5 +11,5 @@ including the function that are used on array
 ..reduce:helps in summing elements of array
 
 part 2
-// it contains the way of displaying inside an HTML element using the javascript DOM(document object model  javascript interface that help to play around with html element in the borwser)
+// it contains the way of displaying inside an HTML element using the javascript DOM(document object model  javascript interface that help to play around with html elements in the borwser)
 
