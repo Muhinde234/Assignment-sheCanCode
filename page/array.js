@@ -12,7 +12,7 @@ const products = [
 ];
 
 //  pushing the new product to the array by using push
-console.log("added new product:")
+
 
 let newProduct={
     name:"Desk",
@@ -20,16 +20,14 @@ let newProduct={
     category:"Furniture"
 }
 
-const AddedProduct=products.push(newProduct)
-console.log(products)
+let Addedproduct=products.push(newProduct);
+console.log("Added new product:", products);
 
 
 // using find to get the details of the product named watch
-console.log("displaying the product with the name' watch':")
 
-const findName=products.find(productName=>productName.name === "Watch")
-console.log(findName)
-
+const watchProduct = products.find(product => product.name === "Watch");
+console.log("Details of 'Watch':", watchProduct);
 
 // using map to create an new array of product name only
  console.log("the array of the product name only:")
@@ -38,10 +36,10 @@ console.log(findName)
  console.log(newArray)
 
  // using filter to get all products that cost more than 100
- console.log("the products that cost more than 100 :")
 
- const productCost=products.filter((cost)=>cost.price>100)
- console.log(productCost)
+
+ const expensiveProducts = products.filter(product => product.price > 100);
+console.log("Products costing more than $100:", expensiveProducts);
 
 
  // using forEach to diaplay product's name and price in the format
@@ -53,15 +51,16 @@ console.log(findName)
 
  // using reduce to calculate the total cost of all products in the array
 
- console.log("the total cost  of all products in the array:")
  const totalCost=products.reduce((sum,item)=>sum+item.price,0)
- console.log(totalCost)
+ console.log("Total cost of all products:", totalCost)
 
  //Part two simple UI to display array in HMTL element
 
- const productListDiv = document.getElementById("product-list");
- products.forEach((product) => {
-    productListDiv.innerHTML += `
-      <p>Product: ${product.name}, Price: $${product.price}</p>
-    `;
-  });
+ const productDisplay = document.getElementById('productDisplay');
+
+// Use forEach to display all products in the HTML
+products.forEach(product => {
+    const productElement = document.createElement('p');
+    productElement.textContent = `Product: ${product.name}, Price: $${product.price}`;
+    productDisplay.appendChild(productElement);
+});
